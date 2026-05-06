@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide Gratuit 2026 – Optimisation Fiscale & Prévoyance · Belgique</title>
+  <meta name="description" content="Téléchargez gratuitement le guide 2026 pour réduire vos impôts et protéger vos revenus en Belgique. Stratégies pension, immobilier, santé et prévoyance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Variables ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #0B1F3A;
+      --navy-mid:  #163155;
+      --blue:      #1D4ED8;
+      --blue-light:#3B82F6;
+      --accent:    #F97316;
+      --accent-soft:#FFF7ED;
+      --gold:      #D4A853;
+      --green:     #16A34A;
+      --green-bg:  #F0FDF4;
+      --red:       #DC2626;
+      --white:     #FFFFFF;
+      --offwhite:  #F8FAFC;
+      --grey-100:  #F1F5F9;
+      --grey-300:  #CBD5E1;
+      --grey-500:  #64748B;
+      --grey-700:  #334155;
+      --text:      #0F172A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ─── Hero Section ──────────────────────────────────────── */
+    .hero {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    /* Geometric background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(29,78,216,0.25) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 80% at 10% 80%, rgba(249,115,22,0.12) 0%, transparent 60%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 80px 24px 0;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: center;
+      min-height: 600px;
+    }
+
+    /* Top badge */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249,115,22,0.15);
+      border: 1px solid rgba(249,115,22,0.4);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #FDBA74;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .hero-badge span { color: #FED7AA; }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.08;
+      color: var(--white);
+      margin-bottom: 24px;
+      animation: fadeDown 0.6s 0.1s ease both;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--gold);
+      position: relative;
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 520px;
+      font-weight: 300;
+      animation: fadeDown 0.6s 0.2s ease both;
+    }
+
+    /* Trust signals row */
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 48px;
+      animation: fadeDown 0.6s 0.3s ease both;
+    }
+
+    .trust-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+    }
+
+    .trust-pill .icon { font-size: 15px; }
+
+    /* Stats bar */
+    .stats-bar {
+      display: flex;
+      gap: 32px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      animation: fadeDown 0.6s 0.4s ease both;
+    }
+
+    .stat { text-align: left; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+    /* ─── Form card ─────────────────────────────────────────── */
+    .form-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05);
+      position: relative;
+      animation: fadeUp 0.7s 0.2s ease both;
+      align-self: flex-end;
+    }
+
+    /* Guide mockup inside card */
+    .guide-mockup {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-mockup::before {
+      content: '';
+      position: absolute;
+      right: -20px; top: -20px;
+      width: 100px; height: 100px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+
+    .guide-mockup-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+
+    .guide-mockup-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .guide-mockup-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .guide-chip {
+      background: rgba(255,255,255,0.12);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.75);
+      font-weight: 500;
+    }
+
+    .form-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .form-card-sub {
+      font-size: 13.5px;
+      color: var(--grey-500);
+      margin-bottom: 24px;
+    }
+
+    .form-group { margin-bottom: 14px; }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--grey-700);
+      margin-bottom: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--grey-300);
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(29,78,216,0.1);
+    }
+
+    .form-input::placeholder { color: #9CA3AF; }
+
+    .btn-cta {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--accent) 0%, #EA580C 100%);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 6px 20px rgba(249,115,22,0.4);
+      margin-top: 6px;
+      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(249,115,22,0.5);
+    }
+
+    .btn-cta:active { transform: translateY(0); }
+
+    .form-privacy {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--grey-500);
+    }
+
+    .form-privacy .lock { font-size: 13px; }
+
+    /* ─── Hero bottom wave ──────────────────────────────────── */
+    .hero-wave {
+      display: block;
+      width: 100%;
+      background: var(--navy);
+      line-height: 0;
+    }
+
+    .hero-wave svg { display: block; width: 100%; }
+
+    /* ─── Social proof bar ──────────────────────────────────── */
+    .proof-bar {
+      background: var(--offwhite);
+      border-bottom: 1px solid var(--grey-100);
+      padding: 20px 24px;
+    }
+
+    .proof-bar-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--grey-700);
+      font-weight: 500;
+    }
+
+    .proof-icon { font-size: 18px; }
+
+    .proof-divider { color: var(--grey-300); font-size: 20px; }
+
+    /* ─── Benefits section ──────────────────────────────────── */
+    .section {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--grey-500);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* Three pillars */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .pillar {
+      background: var(--white);
+      border: 1px solid var(--grey-100);
+      border-radius: 16px;
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pillar:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .pillar::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .pillar-fiscal::before { background: linear-gradient(90deg, var(--blue), var(--blue-light)); }
+    .pillar-immo::before   { background: linear-gradient(90deg, var(--accent), #FB923C); }
+    .pillar-sante::before  { background: linear-gradient(90deg, var(--green), #4ADE80); }
+
+    .pillar-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .pillar-fiscal .pillar-icon { background: rgba(29,78,216,0.08); }
+    .pillar-immo   .pillar-icon { background: rgba(249,115,22,0.08); }
+    .pillar-sante  .pillar-icon { background: rgba(22,163,74,0.08); }
+
+    .pillar-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .pillar-desc {
+      font-size: 14.5px;
+      color: var(--grey-500);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .pillar-items { list-style: none; }
+    .pillar-items li {
+      font-size: 13.5px;
+      color: var(--grey-700);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--grey-100);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pillar-items li:last-child { border-bottom: none; }
+    .pillar-items li::before {
+      content: '›';
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .pillar-fiscal .pillar-items li::before { color: var(--blue); }
+    .pillar-immo   .pillar-items li::before { color: var(--accent); }
+    .pillar-sante  .pillar-items li::before { color: var(--green); }
+
+    /* ─── What's inside ─────────────────────────────────────── */
+    .inside-section {
+      background: var(--navy);
+      padding: 80px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .inside-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(29,78,216,0.2) 0%, transparent 70%);
+    }
+
+    .inside-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .inside-label { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+
+    .inside-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .inside-sub { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 36px; font-weight: 300; }
+
+    .chapter-list { list-style: none; }
+
+    .chapter-item {
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .chapter-item:first-child { padding-top: 0; }
+    .chapter-item:last-child { border-bottom: none; }
+
+    .chapter-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.4;
+      min-width: 36px;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .chapter-text strong { display: block; font-size: 15px; color: var(--white); font-weight: 600; margin-bottom: 4px; }
+    .chapter-text span { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+    /* Guide visual */
+    .guide-visual {
+      background: linear-gradient(145deg, #163155 0%, #1D4ED8 100%);
+      border-radius: 20px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 40px 40px 80px rgba(0,0,0,0.5), -8px -8px 20px rgba(255,255,255,0.03);
+    }
+
+    .guide-visual::after {
+      content: '';
+      position: absolute;
+      right: -40px; bottom: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .guide-visual-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .guide-visual-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .guide-visual-sub { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+
+    .guide-visual-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      margin-bottom: 24px;
+    }
+
+    .guide-pages {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .guide-page-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .page-bar {
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .page-bar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--gold), #F59E0B); }
+
+    .page-label { font-size: 12px; color: rgba(255,255,255,0.4); min-width: 80px; }
+
+    /* ─── Testimonials ──────────────────────────────────────── */
+    .testimonials-section { background: var(--grey-100); padding: 80px 24px; }
+
+    .testimonials-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .testimonials-header { text-align: center; margin-bottom: 48px; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .testimonial {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--grey-100);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .testimonial-stars { color: #FBBF24; font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+
+    .testimonial-text {
+      font-size: 14.5px;
+      color: var(--grey-700);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-text::before { content: '"'; font-family: 'Playfair Display', serif; font-size: 48px; color: var(--grey-300); line-height: 0; vertical-align: -18px; margin-right: 4px; }
+
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+
+    .author-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .author-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+    .author-role { font-size: 12px; color: var(--grey-500); }
+
+    /* ─── CTA Section ───────────────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(29,78,216,0.2) 0%, transparent 70%);
+    }
+
+    .cta-inner { max-width: 640px; margin: 0 auto; position: relative; }
+
+    .cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .cta-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    .cta-form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto 16px;
+    }
+
+    .cta-input {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .cta-btn {
+      padding: 14px 24px;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .cta-btn:hover { background: #EA580C; }
+
+    .cta-note { font-size: 12.5px; color: rgba(255,255,255,0.4); }
+
+    /* ─── Footer ────────────────────────────────────────────── */
+    footer {
+      background: #07121F;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .footer-text { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+    /* ─── Success state ─────────────────────────────────────── */
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .success-icon {
+      width: 60px; height: 60px;
+      background: var(--green-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 16px;
+    }
+
+    .success-title { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .success-sub { font-size: 14px; color: var(--grey-500); line-height: 1.6; }
+
+    /* ─── Animations ────────────────────────────────────────── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .btn-cta { animation: pulse 3s 2s ease-in-out infinite; }
+    .btn-cta:hover { animation: none; }
+
+    /* ─── Responsive ────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; padding: 60px 24px 40px; min-height: auto; gap: 40px; }
+      .form-card { max-width: 480px; }
+      .pillars { grid-template-columns: 1fr; }
+      .inside-inner { grid-template-columns: 1fr; }
+      .guide-visual { order: -1; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .cta-form { flex-direction: column; }
+      .proof-bar-inner { gap: 20px; }
+      .proof-divider { display: none; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+
+    <!-- Left column: copy -->
+    <div class="hero-copy">
+      <div class="hero-badge">
+        <span>🇧🇪</span> Édition 2026 · Belgique
+      </div>
+
+      <h1 class="hero-title">
+        Réduisez vos impôts.<br/>
+        Protégez ce que<br/>
+        vous avez <em>bâti.</em>
+      </h1>
+
+      <p class="hero-subtitle">
+        Le guide pratique pour optimiser vos finances en Belgique : pension,
+        fiscalité, protection familiale et revenus. Clair, concret, sans jargon.
+        Téléchargement gratuit et immédiat.
+      </p>
+
+      <div class="trust-row">
+        <div class="trust-pill"><span class="icon">📄</span> 32 pages structurées</div>
+        <div class="trust-pill"><span class="icon">⏱️</span> Lecture en 12 min</div>
+        <div class="trust-pill"><span class="icon">🔒</span> 100% gratuit</div>
+        <div class="trust-pill"><span class="icon">✅</span> Mis à jour 2026</div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat">
+          <div class="stat-num">+1 200</div>
+          <div class="stat-label">téléchargements</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4,9/5</div>
+          <div class="stat-label">satisfaction lecteurs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">0 €</div>
+          <div class="stat-label">accès immédiat</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column: form card -->
+    <div>
+      <div class="form-card">
+        <!-- Guide mockup -->
+        <div class="guide-mockup">
+          <div class="guide-mockup-label">Guide Officiel</div>
+          <div class="guide-mockup-title">Optimisation Fiscale &<br/>Prévoyance 2026</div>
+          <div class="guide-mockup-chips">
+            <span class="guide-chip">Pension</span>
+            <span class="guide-chip">Fiscalité</span>
+            <span class="guide-chip">Immobilier</span>
+            <span class="guide-chip">Santé</span>
+          </div>
+        </div>
+
+        <div class="form-card-title">Recevez votre guide gratuitement</div>
+        <div class="form-card-sub">Accès immédiat · Aucun engagement · Données sécurisées</div>
+
+        <form id="mainForm">
+          <div class="form-group">
+            <label class="form-label" for="name">Nom complet *</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Prénom et nom" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Adresse email *</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="votre@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Téléphone <span style="font-weight:400;color:#9CA3AF">(optionnel)</span></label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+32 4XX XXX XXX" />
+          </div>
+
+          <button type="submit" class="btn-cta">
+            <span>📥</span> Recevoir mon guide gratuit
+          </button>
+
+          <div class="form-privacy">
+            <span class="lock">🔒</span>
+            Données confidentielles · Désinscription en 1 clic
+          </div>
+        </form>
+
+        <div class="success-state" id="successState">
+          <div class="success-icon">✅</div>
+          <div class="success-title">Votre guide est en route !</div>
+          <div class="success-sub">
+            Vérifiez votre boîte mail dans quelques instants.<br/>
+            Pensez à vérifier vos spams si nécessaire.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /hero-inner -->
+</section>
+
+<div class="hero-wave">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60">
+    <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="#F8FAFC"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SOCIAL PROOF BAR
+════════════════════════════════════════════════════════════ -->
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-item"><span class="proof-icon">⭐</span> Note 4,9/5 par nos lecteurs</div>
+    <span class="proof-divider">·</span>
+    <div class="proof-item"><span class="proof-icon">🇧🇪</span> Spécifiquement adapté au droit belge</div>
+    <span class="proof-divider">·</span>
+    <div class="proof-item"><span class="proof-icon">🔄</span> Mis à jour janvier 2026</div>
+    <span class="proof-divider">·</span>
+    <div class="proof-item"><span class="proof-icon">👤</span> Conseillers indépendants certifiés FSMA</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PILLARS
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section">
+    <div class="section-label">Ce que vous allez découvrir</div>
+    <h2 class="section-title">3 axes pour protéger<br/>votre patrimoine en 2026</h2>
+    <p class="section-sub">Que vous soyez salarié, indépendant ou en pleine constitution de patrimoine, ce guide couvre les leviers qui changent vraiment votre situation.</p>
+
+    <div class="pillars">
+
+      <div class="pillar pillar-fiscal">
+        <div class="pillar-icon">💶</div>
+        <div class="pillar-title">Fiscalité & Optimisation</div>
+        <p class="pillar-desc">Payez moins d'impôts en toute légalité. Stratégies concrètes pour salariés et indépendants belges.</p>
+        <ul class="pillar-items">
+          <li>Épargne-pension : plafond 2026 et déductions</li>
+          <li>Réduction IPP via produits de branche 21</li>
+          <li>Optimisation via Épargne Long Terme</li>
+          <li>Avantages fiscaux assurance-vie belge</li>
+        </ul>
+      </div>
+
+      <div class="pillar pillar-immo">
+        <div class="pillar-icon">🏡</div>
+        <div class="pillar-title">Immobilier & Protection</div>
+        <p class="pillar-desc">Sécurisez votre famille et votre projet immobilier sans payer trop cher pour votre assurance.</p>
+        <ul class="pillar-items">
+          <li>Solde restant dû : comment comparer et négocier</li>
+          <li>Assurance décès et couverture du prêt</li>
+          <li>Protection familiale en cas d'invalidité</li>
+          <li>Transmission et succession simplifiées</li>
+        </ul>
+      </div>
+
+      <div class="pillar pillar-sante">
+        <div class="pillar-icon">❤️</div>
+        <div class="piltar-title" style="font-size:18px;font-weight:700;color:var(--navy);margin-bottom:12px;">Revenus & Santé</div>
+        <p class="pillar-desc">Protégez vos revenus contre la maladie, l'accident ou l'incapacité. Un pilier souvent sous-estimé.</p>
+        <ul class="pillar-items">
+          <li>Revenu garanti : ce que la mutuelle ne couvre pas</li>
+          <li>Hospitalisation : comparaison mutualités vs privé</li>
+          <li>Maintien de revenus en cas d'incapacité longue</li>
+          <li>Protection spéciale indépendants & TNS</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHAT'S INSIDE
+════════════════════════════════════════════════════════════ -->
+<div class="inside-section">
+  <div class="inside-inner">
+
+    <div>
+      <div class="inside-label">Au programme</div>
+      <h2 class="inside-title">Ce que contient<br/>votre guide 2026</h2>
+      <p class="inside-sub">32 pages structurées, sans jargon. Un plan d'action concret en conclusion pour votre situation personnelle.</p>
+
+      <ul class="chapter-list">
+        <li class="chapter-item">
+          <span class="chapter-num">01</span>
+          <div class="chapter-text">
+            <strong>Pourquoi vous payez trop d'impôts (et comment l'arrêter)</strong>
+            <span>Les 5 erreurs fiscales les plus fréquentes en Belgique</span>
+          </div>
+        </li>
+        <li class="chapter-item">
+          <span class="chapter-num">02</span>
+          <div class="chapter-text">
+            <strong>Épargne-pension, Branche 21 & 23 : mode d'emploi</strong>
+            <span>Plafonds 2026, déductions IPP, quelle formule choisir selon votre profil</span>
+          </div>
+        </li>
+        <li class="chapter-item">
+          <span class="chapter-num">03</span>
+          <div class="chapter-text">
+            <strong>Protéger votre prêt immobilier sans surpayer</strong>
+            <span>Assurance solde restant dû : calcul, comparaison et marge de négociation</span>
+          </div>
+        </li>
+        <li class="chapter-item">
+          <span class="chapter-num">04</span>
+          <div class="chapter-text">
+            <strong>Revenus, santé et incapacité : les vrais risques financiers</strong>
+            <span>Ce que vous perdez vraiment en cas d'arrêt de travail prolongé</span>
+          </div>
+        </li>
+        <li class="chapter-item">
+          <span class="chapter-num">05</span>
+          <div class="chapter-text">
+            <strong>Plan d'action personnalisé</strong>
+            <span>Checklist des 10 actions à mettre en place cette année selon votre situation</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="guide-visual">
+        <div class="guide-visual-badge">Guide 2026</div>
+        <div class="guide-visual-title">Optimisation Fiscale<br/>& Prévoyance</div>
+        <div class="guide-visual-sub">Guide pratique · Belgique · Édition 2026</div>
+        <div class="guide-visual-divider"></div>
+        <div class="guide-pages">
+          <div class="guide-page-row">
+            <div class="page-label">Fiscalité</div>
+            <div class="page-bar"><div class="page-bar-fill" style="width:90%"></div></div>
+          </div>
+          <div class="guide-page-row">
+            <div class="page-label">Immobilier</div>
+            <div class="page-bar"><div class="page-bar-fill" style="width:75%"></div></div>
+          </div>
+          <div class="guide-page-row">
+            <div class="page-label">Santé</div>
+            <div class="page-bar"><div class="page-bar-fill" style="width:65%"></div></div>
+          </div>
+          <div class="guide-page-row">
+            <div class="page-label">Pension</div>
+            <div class="page-bar"><div class="page-bar-fill" style="width:80%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════════════════ -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="testimonials-header">
+      <div class="section-label">Témoignages</div>
+      <h2 class="section-title">Ce qu'en disent nos lecteurs</h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">J'avais l'impression de payer beaucoup d'impôts mais je ne savais pas pourquoi. Ce guide m'a ouvert les yeux sur l'épargne-pension et j'ai pris rendez-vous dans la foulée.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#1D4ED8,#3B82F6)">M</div>
+          <div>
+            <div class="author-name">Marie D.</div>
+            <div class="author-role">Ingénieure · Liège</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Guide clair et précis sur le solde restant dû. On m'avait vendu une assurance bien trop chère par ma banque — je le savais mais je n'avais pas les arguments. Maintenant si.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#F97316,#EA580C)">T</div>
+          <div>
+            <div class="author-name">Thomas V.</div>
+            <div class="author-role">Entrepreneur · Namur</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">En tant qu'indépendante, je ne savais pas que j'étais aussi exposée en cas de maladie longue. Chapitre 4 choquant — mais nécessaire. Merci pour cette prise de conscience.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#16A34A,#4ADE80)">S</div>
+          <div>
+            <div class="author-name">Sophie L.</div>
+            <div class="author-role">Indépendante · Bruxelles</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOTTOM CTA
+════════════════════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">Prêt à reprendre<br/>le contrôle de vos finances ?</h2>
+    <p class="cta-sub">Rejoignez +1 200 lecteurs belges qui ont déjà téléchargé le guide.<br/>Gratuit, immédiat, sans engagement.</p>
+
+    <form class="cta-form" id="ctaForm">
+      <input class="cta-input" type="email" id="ctaEmail" placeholder="votre@email.com" required />
+      <button type="submit" class="cta-btn">📥 Recevoir</button>
+    </form>
+
+    <div class="cta-note">🔒 Données confidentielles · Désinscription en 1 clic</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Cabinet Conseil Assurance</div>
+    <div class="footer-text">© 2026 · Wallonie & Bruxelles · Conseillers indépendants certifiés FSMA</div>
+    <div class="footer-text">Données protégées conformément au RGPD</div>
+  </div>
+</footer>
+
+<script>
+  // Main form submission
+  document.getElementById('mainForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('successState').style.display = 'block';
+    // Here you would integrate with Brevo / any email service
+    // Example: fetch('/api/subscribe', { method:'POST', body: new FormData(this) })
+  });
+
+  // CTA form
+  document.getElementById('ctaForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('ctaEmail').value;
+    const btn = this.querySelector('button');
+    btn.textContent = '✅ Guide envoyé !';
+    btn.style.background = '#16A34A';
+    this.querySelector('input').disabled = true;
+    btn.disabled = true;
+  });
+
+  // Smooth reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.style.opacity = '1';
+        el.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.pillar, .testimonial, .chapter-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>

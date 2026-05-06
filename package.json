@@ -1,0 +1,11 @@
+
+{
+  "name": "guide-2026-netlify",
+  "version": "1.0.0",
+  "description": "Landing page + automation",
+  "main": "index.js",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "dependencies": {}
+}

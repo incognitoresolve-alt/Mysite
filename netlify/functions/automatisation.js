@@ -1,17 +1,23 @@
 exports.handler = async (event) => {
-  // 1. Netlify récupère les informations du formulaire
   const data = JSON.parse(event.body);
   const userEmail = data.email;
   const userName = data.name || "Lecteur";
 
   console.log("Nouveau prospect reçu :", data.email);
 
-  // 2. VOTRE CONFIGURATION (CORRIGÉE)
-  const BREVO_API_KEY = "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"; 
+  // 2. CONFIGURATION SÉCURISÉE
+  // On récupère la clé depuis le coffre-fort Netlify (Environment Variables)
+  const BREVO_API_KEY = process.env.BREVO_API_KEY; 
   const SENDER_EMAIL = "yaoakoe.ovb@gmail.com"; 
   const LIEN_DU_GUIDE = "https://guidefin.netlify.app/guide-2026.html";
 
-  // 3. Le contenu de l'e-mail à envoyer au client
+  // Si la clé n'est pas trouvée dans Netlify, on bloque l'envoi pour éviter une erreur serveur
+  if (!BREVO_API_KEY) {
+    console.error("Erreur critique : La clé API Brevo est introuvable.");
+    return { statusCode: 500, body: JSON.stringify({ message: "Configuration manquante" }) };
+  }
+
+  // 3. Le contenu de l'e-mail
   const emailPayload = {
     sender: { name: "Cabinet Conseil Assurance", email: SENDER_EMAIL },
     to: [{ email: userEmail, name: userName }],
@@ -29,7 +35,6 @@ exports.handler = async (event) => {
   };
 
   try {
-    // 4. On demande au "facteur" Brevo de livrer l'e-mail
     const response = await fetch("https://api.brevo.com/v3/smtp/email", {
       method: "POST",
       headers: {

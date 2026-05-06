@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide 2026 – Optimisation Fiscale & Prévoyance · Belgique</title>
+  <meta name="description" content="Guide complet 2026 pour réduire vos impôts et protéger vos revenus en Belgique. Stratégies pension, immobilier, santé et prévoyance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Variables ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #0B1F3A;
+      --navy-mid:   #163155;
+      --blue:       #1D4ED8;
+      --blue-light: #3B82F6;
+      --accent:     #F97316;
+      --accent-soft:#FFF7ED;
+      --gold:       #D4A853;
+      --green:      #16A34A;
+      --green-bg:   #F0FDF4;
+      --red:        #DC2626;
+      --white:      #FFFFFF;
+      --offwhite:   #F8FAFC;
+      --grey-100:   #F1F5F9;
+      --grey-300:   #CBD5E1;
+      --grey-500:   #64748B;
+      --grey-700:   #334155;
+      --text:       #0F172A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ─── Shared section wrapper ──────────────────────────── */
+    .section-wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--grey-500);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* ─── HEADER / TOP BAR ──────────────────────────────────── */
+    .top-bar {
+      background: var(--navy);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .top-bar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.01em;
+    }
+
+    .top-bar-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-bar-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    .top-bar-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .top-bar-cta:hover { background: #EA580C; }
+
+    /* ─── HERO ──────────────────────────────────────────────── */
+    .hero {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 80% 40%, rgba(29,78,216,0.22) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 80% at 5% 90%, rgba(249,115,22,0.1) 0%, transparent 60%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 80px 24px 96px;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249,115,22,0.15);
+      border: 1px solid rgba(249,115,22,0.4);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #FDBA74;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(36px, 5vw, 60px);
+      line-height: 1.08;
+      color: var(--white);
+      margin-bottom: 24px;
+      animation: fadeDown 0.6s 0.1s ease both;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: rgba(255,255,255,0.62);
+      line-height: 1.75;
+      margin-bottom: 44px;
+      max-width: 520px;
+      font-weight: 300;
+      animation: fadeDown 0.6s 0.2s ease both;
+    }
+
+    /* Trust pills */
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 48px;
+      animation: fadeDown 0.6s 0.3s ease both;
+    }
+
+    .trust-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      display: flex;
+      gap: 40px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      animation: fadeDown 0.6s 0.4s ease both;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 2px;
+    }
+
+    /* Table of contents card */
+    .toc-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 36px 32px;
+      animation: fadeUp 0.7s 0.25s ease both;
+      backdrop-filter: blur(8px);
+    }
+
+    .toc-card-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .toc-list { list-style: none; }
+
+    .toc-item {
+      display: flex;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .toc-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .toc-item:first-child { padding-top: 0; }
+    .toc-item:hover { opacity: 0.75; }
+
+    .toc-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.45;
+      min-width: 28px;
+      line-height: 1.1;
+      padding-top: 1px;
+    }
+
+    .toc-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+
+    .toc-text span {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.5;
+    }
+
+    /* ─── WAVE ─────────────────────────────────────────────── */
+    .wave {
+      display: block;
+      background: var(--navy);
+      line-height: 0;
+    }
+    .wave svg { display: block; width: 100%; }
+
+    /* ─── PROOF BAR ─────────────────────────────────────────── */
+    .proof-bar {
+      background: var(--offwhite);
+      border-bottom: 1px solid var(--grey-100);
+      padding: 20px 24px;
+    }
+
+    .proof-bar-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--grey-700);
+      font-weight: 500;
+    }
+
+    .proof-divider { color: var(--grey-300); font-size: 20px; }
+
+    /* ─── CHAPTER SECTIONS ──────────────────────────────────── */
+
+    /* Chapter header banner */
+    .chapter-banner {
+      background: var(--navy);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chapter-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 100% at 80% 50%, rgba(29,78,216,0.18) 0%, transparent 70%);
+    }
+
+    .chapter-banner-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .chapter-num-large {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 900;
+      color: rgba(212,168,83,0.15);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .chapter-banner-text .chapter-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .chapter-banner-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    /* ─── Generic content layout ────────────────────────────── */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .content-grid.reverse { direction: rtl; }
+    .content-grid.reverse > * { direction: ltr; }
+
+    .content-body p {
+      font-size: 15.5px;
+      color: var(--grey-700);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .content-body p:last-child { margin-bottom: 0; }
+
+    .content-body strong { color: var(--navy); font-weight: 600; }
+
+    /* Insight list */
+    .insight-list {
+      list-style: none;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .insight-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: var(--grey-700);
+      line-height: 1.65;
+    }
+
+    .insight-list li .check {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--white);
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+
+    .check-blue  { background: var(--blue); }
+    .check-orange{ background: var(--accent); }
+    .check-green { background: var(--green); }
+    .check-gold  { background: var(--gold); color: var(--navy) !important; }
+
+    /* Stat card */
+    .stat-card {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(29,78,216,0.2) 0%, transparent 70%);
+    }
+
+    .stat-card-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .stat-card-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .stat-card-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      margin-bottom: 20px;
+    }
+
+    .stat-card-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      position: relative;
+    }
+
+    /* Info box */
+    .info-box {
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    .info-box-blue  { background: rgba(29,78,216,0.06);  border: 1px solid rgba(29,78,216,0.15); }
+    .info-box-orange{ background: var(--accent-soft);    border: 1px solid rgba(249,115,22,0.2); }
+    .info-box-green { background: var(--green-bg);       border: 1px solid rgba(22,163,74,0.2); }
+    .info-box-gold  { background: rgba(212,168,83,0.07); border: 1px solid rgba(212,168,83,0.25); }
+
+    .info-box-title {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .info-box-blue  .info-box-title { color: var(--blue); }
+    .info-box-orange .info-box-title { color: #C2410C; }
+    .info-box-green  .info-box-title { color: var(--green); }
+    .info-box-gold   .info-box-title { color: #B8862A; }
+
+    .info-box p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--grey-700);
+      margin: 0 !important;
+    }
+
+    /* Data table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 28px;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      background: var(--navy);
+      color: rgba(255,255,255,0.85);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 8px 0 0; }
+
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--grey-100);
+      color: var(--grey-700);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table tr:nth-child(even) td { background: var(--offwhite); }
+
+    .data-table td strong { color: var(--navy); font-weight: 600; }
+
+    .badge-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .badge-blue  { background: rgba(29,78,216,0.1);  color: var(--blue); }
+    .badge-green { background: var(--green-bg);       color: var(--green); }
+    .badge-orange{ background: var(--accent-soft);    color: #C2410C; }
+
+    /* ─── PILLARS (Chapitre 1 cards) ────────────────────────── */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .pillar-card {
+      background: var(--white);
+      border: 1px solid var(--grey-100);
+      border-radius: 16px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .pillar-card.blue::before   { background: linear-gradient(90deg, var(--blue), var(--blue-light)); }
+    .pillar-card.orange::before { background: linear-gradient(90deg, var(--accent), #FB923C); }
+    .pillar-card.green::before  { background: linear-gradient(90deg, var(--green), #4ADE80); }
+
+    .pillar-icon {
+      width: 48px; height: 48px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .pillar-card.blue  .pillar-icon { background: rgba(29,78,216,0.08); }
+    .pillar-card.orange .pillar-icon { background: rgba(249,115,22,0.08); }
+    .pillar-card.green  .pillar-icon { background: rgba(22,163,74,0.08); }
+
+    .pillar-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .pillar-card p {
+      font-size: 13.5px;
+      color: var(--grey-500);
+      line-height: 1.65;
+    }
+
+    /* ─── TIMELINE (Chapitre 4) ─────────────────────────────── */
+    .timeline-section {
+      background: var(--navy);
+      padding: 80px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 90% 50%, rgba(29,78,216,0.15) 0%, transparent 70%);
+    }
+
+    .timeline-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .timeline-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .timeline-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px; top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--gold), rgba(212,168,83,0.08));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 44px;
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -42px; top: 5px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(212,168,83,0.2);
+    }
+
+    .timeline-age {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .timeline-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.7;
+    }
+
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .timeline-tag {
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+    }
+
+    /* ─── ACTION PLAN (Chapitre 5) ──────────────────────────── */
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .action-item {
+      background: var(--white);
+      border: 1px solid var(--grey-100);
+      border-radius: 12px;
+      padding: 20px 20px 20px 60px;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+
+    .action-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+
+    .action-num {
+      position: absolute;
+      left: 16px; top: 18px;
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--grey-300);
+      line-height: 1;
+    }
+
+    .action-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .action-desc {
+      font-size: 13px;
+      color: var(--grey-500);
+      line-height: 1.6;
+    }
+
+    .action-tag {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* ─── TESTIMONIALS ──────────────────────────────────────── */
+    .testimonials-section {
+      background: var(--grey-100);
+      padding: 80px 24px;
+    }
+
+    .testimonials-inner { max-width: 1140px; margin: 0 auto; }
+
+    .testimonials-header { text-align: center; margin-bottom: 48px; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .testimonial {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--grey-100);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .testimonial-stars { color: #FBBF24; font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+
+    .testimonial-text {
+      font-size: 14.5px;
+      color: var(--grey-700);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-text::before {
+      content: '"';
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: var(--grey-300);
+      line-height: 0;
+      vertical-align: -18px;
+      margin-right: 4px;
+    }
+
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+
+    .author-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 700; color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .author-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+    .author-role { font-size: 12px; color: var(--grey-500); }
+
+    /* ─── BOTTOM CTA ────────────────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(29,78,216,0.18) 0%, transparent 70%);
+    }
+
+    .cta-inner { max-width: 640px; margin: 0 auto; position: relative; }
+
+    .cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .cta-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.58);
+      margin-bottom: 36px;
+      line-height: 1.65;
+    }
+
+    .cta-form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto 16px;
+    }
+
+    .cta-input {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .cta-btn {
+      padding: 14px 24px;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .cta-btn:hover { background: #EA580C; }
+
+    .cta-note { font-size: 12.5px; color: rgba(255,255,255,0.38); }
+
+    /* ─── FOOTER ────────────────────────────────────────────── */
+    footer {
+      background: #07121F;
+      padding: 32px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .footer-text { font-size: 12px; color: rgba(255,255,255,0.28); }
+
+    /* ─── Light section backgrounds ────────────────────────── */
+    .bg-offwhite { background: var(--offwhite); }
+    .bg-white    { background: var(--white); }
+    .bg-grey     { background: var(--grey-100); }
+
+    /* Section divider */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--grey-100);
+      margin: 0;
+    }
+
+    /* ─── Animations ────────────────────────────────────────── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── Responsive ────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-inner          { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px 72px; }
+      .content-grid,
+      .content-grid.reverse{ grid-template-columns: 1fr; direction: ltr; gap: 36px; }
+      .pillars-grid        { grid-template-columns: 1fr; }
+      .action-grid         { grid-template-columns: 1fr; }
+      .testimonials-grid   { grid-template-columns: 1fr; }
+      .cta-form            { flex-direction: column; }
+      .top-bar-meta        { display: none; }
+      .proof-divider       { display: none; }
+      .footer-inner        { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TOP BAR
+════════════════════════════════════════════════════════════ -->
+<nav class="top-bar">
+  <div class="top-bar-brand">Cabinet Conseil Assurance</div>
+  <div class="top-bar-meta">
+    <div class="top-bar-pill">🇧🇪 Belgique 2026</div>
+    <div class="top-bar-pill">📄 32 pages</div>
+    <div class="top-bar-pill">✅ FSMA certifié</div>
+  </div>
+  <a href="https://calendly.com/yaoakoe-ovb" target="_blank" class="top-bar-cta">📅 Prendre RDV</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+
+    <!-- Left column -->
+    <div>
+      <div class="hero-badge">
+        <span>🇧🇪</span> Édition 2026 · Belgique
+      </div>
+
+      <h1 class="hero-title">
+        Réduisez vos impôts.<br/>
+        Protégez ce que<br/>
+        vous avez <em>bâti.</em>
+      </h1>
+
+      <p class="hero-subtitle">
+        Le guide pratique pour optimiser vos finances en Belgique : pension,
+        fiscalité, protection familiale et revenus. Clair, concret, sans jargon.
+        Téléchargement gratuit et immédiat.
+      </p>
+
+      <div class="trust-row">
+        <div class="trust-pill"><span>📄</span> 32 pages structurées</div>
+        <div class="trust-pill"><span>⏱️</span> Lecture en 12 min</div>
+        <div class="trust-pill"><span>🔒</span> 100% gratuit</div>
+        <div class="trust-pill"><span>✅</span> Mis à jour 2026</div>
+      </div>
+
+      <div class="stats-bar">
+        <div>
+          <div class="stat-num">+1 200</div>
+          <div class="stat-label">téléchargements</div>
+        </div>
+        <div>
+          <div class="stat-num">4,9/5</div>
+          <div class="stat-label">satisfaction lecteurs</div>
+        </div>
+        <div>
+          <div class="stat-num">0 €</div>
+          <div class="stat-label">accès immédiat</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column: Table of contents -->
+    <div>
+      <div class="toc-card">
+        <div class="toc-card-title">Au programme · 5 chapitres</div>
+        <ul class="toc-list">
+          <li class="toc-item" onclick="document.getElementById('ch1').scrollIntoView({behavior:'smooth'})">
+            <span class="toc-num">01</span>
+            <div class="toc-text">
+              <strong>Pourquoi vous payez trop d'impôts</strong>
+              <span>Les 5 erreurs fiscales les plus fréquentes des actifs belges</span>
+            </div>
+          </li>
+          <li class="toc-item" onclick="document.getElementById('ch2').scrollIntoView({behavior:'smooth'})">
+            <span class="toc-num">02</span>
+            <div class="toc-text">
+              <strong>Épargne-pension, Branche 21 & 23</strong>
+              <span>Plafonds 2026, déductions IPP, quelle formule choisir</span>
+            </div>
+          </li>
+          <li class="toc-item" onclick="document.getElementById('ch3').scrollIntoView({behavior:'smooth'})">
+            <span class="toc-num">03</span>
+            <div class="toc-text">
+              <strong>Protéger votre prêt immobilier</strong>
+              <span>SRD : calcul, comparaison et marge de négociation</span>
+            </div>
+          </li>
+          <li class="toc-item" onclick="document.getElementById('ch4').scrollIntoView({behavior:'smooth'})">
+            <span class="toc-num">04</span>
+            <div class="toc-text">
+              <strong>Revenus, santé & incapacité</strong>
+              <span>Ce que vous perdez vraiment en cas d'arrêt prolongé</span>
+            </div>
+          </li>
+          <li class="toc-item" onclick="document.getElementById('ch5').scrollIntoView({behavior:'smooth'})">
+            <span class="toc-num">05</span>
+            <div class="toc-text">
+              <strong>Plan d'action personnalisé</strong>
+              <span>Checklist des 10 actions à mettre en place cette année</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="wave">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60">
+    <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="#F8FAFC"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROOF BAR
+════════════════════════════════════════════════════════════ -->
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-item"><span>⭐</span> Note 4,9/5 par nos lecteurs</div>
+    <span class="proof-divider">·</span>
+    <div class="proof-item"><span>🇧🇪</span> Spécifiquement adapté au droit belge</div>
+    <span class="proof-divider">·</span>
+    <div class="proof-item"><span>🔄</span> Mis à jour janvier 2026</div>
+    <span class="proof-divider">·</span>
+    <div class="proof-item"><span>👤</span> Conseiller indépendant certifié FSMA</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CHAPITRE 01 – FISCALITÉ
+════════════════════════════════════════════════════════════ -->
+<div id="ch1" class="chapter-banner">
+  <div class="chapter-banner-inner">
+    <div class="chapter-num-large">01</div>
+    <div class="chapter-banner-text">
+      <div class="chapter-tag">Chapitre 01 — Fiscalité & Optimisation</div>
+      <h2>Pourquoi vous payez trop d'impôts<br/>— et comment l'arrêter</h2>
+    </div>
+  </div>
+</div>
+
+<div class="bg-offwhite">
+  <div class="section-wrap">
+    <div class="section-label">Les fondamentaux</div>
+    <h2 class="section-title">3 leviers fiscaux sous-utilisés<br/>par la majorité des Belges</h2>
+    <p class="section-sub">En Belgique, l'optimisation fiscale légale est accessible à tous — salariés comme indépendants. Pourtant, la plupart des contribuables ignorent les dispositifs qui leur feraient économiser plusieurs centaines d'euros chaque année.</p>
+
+    <div class="pillars-grid">
+      <div class="pillar-card blue">
+        <div class="pillar-icon">💶</div>
+        <div class="pillar-card-title">Épargne-pension</div>
+        <p>Réduction d'impôt de 25 à 30% sur les versements, dans les limites fixées chaque année. Le levier le plus immédiat et le plus sous-utilisé.</p>
+      </div>
+      <div class="pillar-card orange">
+        <div class="pillar-icon">🏡</div>
+        <div class="pillar-card-title">Épargne Long Terme</div>
+        <p>Complémentaire à l'épargne-pension : les primes d'assurance-vie (branche 21/23) ouvrent droit à une réduction IPP distincte, plafonnée à 2 450 € en 2026.</p>
+      </div>
+      <div class="pillar-card green">
+        <div class="pillar-icon">📊</div>
+        <div class="pillar-card-title">Exonérations liées au logement</div>
+        <p>Intérêts d'emprunt, bonus logement régional, avantages liés à la domiciliation : chaque région a ses propres mécanismes qu'il est indispensable de combiner.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:56px;">
+      <div class="content-grid">
+        <div class="content-body">
+          <p>La <strong>complexité du Code des impôts belge</strong> n'est pas une fatalité : elle est aussi une opportunité. Chaque déduction non réclamée, c'est un remboursement que vous aurez financé sans en bénéficier.</p>
+          <p>Les 5 erreurs fiscales les plus fréquentes des actifs belges :</p>
+          <ul class="insight-list">
+            <li><span class="check check-blue">✓</span> Ne pas maximiser l'épargne-pension chaque année (beaucoup versent en dessous du plafond)</li>
+            <li><span class="check check-blue">✓</span> Ignorer l'épargne à long terme comme second levier cumulable</li>
+            <li><span class="check check-blue">✓</span> Négliger les déductions régionales liées à l'habitation propre et unique</li>
+            <li><span class="check check-blue">✓</span> Ne pas déclarer les frais professionnels réels quand ils dépassent le forfait</li>
+            <li><span class="check check-blue">✓</span> Sous-estimer les avantages de la branche 21 comme complément défiscalisé</li>
+          </ul>
+
+          <div class="info-box info-box-blue" style="margin-top:28px;">
+            <div class="info-box-title">💡 Bon à savoir — Plafond 2026</div>
+            <p>Le plafond de l'épargne-pension est indexé chaque année. En 2026, vous pouvez choisir entre deux tranches : versement jusqu'à <strong>1 350 €</strong> (réduction de 30%) ou entre 1 350 € et <strong>1 710 €</strong> (réduction de 25%). Le rendement fiscal de la première tranche est donc supérieur.</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-card-number">510 €</div>
+          <div class="stat-card-desc">C'est le montant moyen de réduction d'impôt annuelle obtenu par un contribuable belge qui maximise son épargne-pension à 1 710 €. Une économie immédiate, garantie chaque année.</div>
+          <div class="stat-card-divider"></div>
+          <div class="stat-card-quote">« Le meilleur placement fiscal belge, c'est celui que l'État vous offre chaque année — et que beaucoup refusent sans le savoir. »</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CHAPITRE 02 – ÉPARGNE & PENSION
+════════════════════════════════════════════════════════════ -->
+<hr class="section-divider" id="ch2"/>
+
+<div class="chapter-banner">
+  <div class="chapter-banner-inner">
+    <div class="chapter-num-large">02</div>
+    <div class="chapter-banner-text">
+      <div class="chapter-tag">Chapitre 02 — Épargne & Pension</div>
+      <h2>Épargne-pension, Branche 21 & 23 :<br/>mode d'emploi 2026</h2>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white">
+  <div class="section-wrap">
+    <div class="content-grid reverse">
+      <div class="stat-card">
+        <div class="stat-card-number">4</div>
+        <div class="stat-card-desc">piliers de pension composent votre retraite en Belgique. La pension légale (1er pilier) ne représente en moyenne que 40 à 60% de votre dernier salaire. Les piliers complémentaires font toute la différence.</div>
+        <div class="stat-card-divider"></div>
+        <div class="stat-card-quote">« Construire sa pension, c'est additionner des petites décisions prises tôt — et les laisser travailler pour vous. »</div>
+      </div>
+
+      <div class="content-body">
+        <div class="section-label">Les 4 piliers de pension belges</div>
+        <h2 class="section-title" style="font-size:clamp(22px,3vw,32px);margin-bottom:16px;">Comprendre votre retraite<br/>avant de l'optimiser</h2>
+        <p>La pension légale belge est calculée sur la base de votre carrière et de vos revenus. Pour un salarié avec carrière complète, elle représente environ <strong>60% du salaire moyen</strong> plafonné. Pour un indépendant, la situation est souvent moins favorable.</p>
+        <p>Les piliers 2 (assurance groupe), 3 (épargne-pension individuelle) et 4 (épargne libre) permettent de combler l'écart. Chacun a ses règles fiscales et ses conditions d'accès.</p>
+        <ul class="insight-list">
+          <li><span class="check check-blue">✓</span> <strong>Pilier 1 :</strong> pension légale — dépend de votre statut et de votre carrière</li>
+          <li><span class="check check-blue">✓</span> <strong>Pilier 2 :</strong> assurance groupe via l'employeur ou EIP/PLCI pour les indépendants</li>
+          <li><span class="check check-blue">✓</span> <strong>Pilier 3 :</strong> épargne-pension individuelle avec avantage fiscal direct</li>
+          <li><span class="check check-blue">✓</span> <strong>Pilier 4 :</strong> épargne libre (branche 21/23, VAPW, immo…) sans fiscalité dédiée</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tableau comparatif -->
+    <div style="margin-top:64px;">
+      <div class="section-label">Comparatif produits</div>
+      <h3 class="section-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:8px;">Branche 21 vs Branche 23<br/>— quelle formule selon votre profil ?</h3>
+      <p class="section-sub" style="margin-bottom:0;">Les deux produits d'assurance-vie belges répondent à des objectifs différents. Voici comment choisir.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Critère</th>
+            <th>Branche 21</th>
+            <th>Branche 23</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Capital garanti</strong></td>
+            <td>✅ Oui — taux garanti + participation bénéfices</td>
+            <td>❌ Non — lié aux fonds d'investissement</td>
+          </tr>
+          <tr>
+            <td><strong>Potentiel de rendement</strong></td>
+            <td>Faible à modéré (environ 1,5–2,5%)</td>
+            <td>Élevé (mais variable, pertes possibles)</td>
+          </tr>
+          <tr>
+            <td><strong>Fiscalité à l'entrée</strong></td>
+            <td>Taxe 2% sur les primes</td>
+            <td>Taxe 2% sur les primes</td>
+          </tr>
+          <tr>
+            <td><strong>Fiscalité à la sortie</strong></td>
+            <td>Précompte de 30% si < 8 ans</td>
+            <td>Pas de précompte mobilier</td>
+          </tr>
+          <tr>
+            <td><strong>Profil recommandé</strong></td>
+            <td><span class="badge-tag badge-green">Prudent</span></td>
+            <td><span class="badge-tag badge-orange">Dynamique</span></td>
+          </tr>
+          <tr>
+            <td><strong>Horizon conseillé</strong></td>
+            <td>Court à long terme</td>
+            <td>Long terme (10 ans minimum)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box info-box-gold" style="margin-top:24px;">
+        <div class="info-box-title">⚡ La combinaison gagnante</div>
+        <p>Pour un profil équilibré, une allocation mixte Branche 21 / Branche 23 permet de sécuriser une base de capital tout en profitant du potentiel de croissance des marchés. La répartition dépend de votre âge, de votre horizon et de votre tolérance au risque.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CHAPITRE 03 – IMMOBILIER
+════════════════════════════════════════════════════════════ -->
+<hr class="section-divider" id="ch3"/>
+
+<div class="chapter-banner">
+  <div class="chapter-banner-inner">
+    <div class="chapter-num-large">03</div>
+    <div class="chapter-banner-text">
+      <div class="chapter-tag">Chapitre 03 — Immobilier & Protection</div>
+      <h2>Protéger votre prêt immobilier<br/>sans surpayer votre assurance</h2>
+    </div>
+  </div>
+</div>
+
+<div class="bg-offwhite">
+  <div class="section-wrap">
+    <div class="content-grid">
+      <div class="content-body">
+        <div class="section-label">Assurance Solde Restant Dû (SRD)</div>
+        <h2 class="section-title" style="font-size:clamp(22px,3vw,32px);margin-bottom:16px;">Ce que votre banque<br/>ne vous dit pas</h2>
+        <p>En Belgique, la majorité des emprunteurs souscrivent leur assurance SRD auprès de la banque prêteuse. Pourtant, <strong>vous n'êtes pas obligé</strong> de le faire — et les alternatives sont souvent significativement moins chères.</p>
+        <p>Le principe : en cas de décès (ou d'invalidité selon la formule), l'assurance rembourse tout ou partie du capital restant dû à la banque. Votre famille n'hérite pas du crédit. C'est une couverture essentielle — mais son coût varie énormément selon les assureurs.</p>
+
+        <ul class="insight-list" style="margin-top:20px;">
+          <li><span class="check check-orange">✓</span> La prime SRD est déductible fiscalement dans le cadre de l'<strong>Épargne Long Terme</strong></li>
+          <li><span class="check check-orange">✓</span> Un courtier indépendant peut obtenir des primes 20 à 40% moins élevées que la banque</li>
+          <li><span class="check check-orange">✓</span> La couverture peut être modulée : décès seul, invalidité totale ou partielle</li>
+          <li><span class="check check-orange">✓</span> La co-assurance (avec votre partenaire) doit être configurée selon vos revenus respectifs</li>
+        </ul>
+
+        <div class="info-box info-box-orange" style="margin-top:28px;">
+          <div class="info-box-title">⚠️ Clause à vérifier absolument</div>
+          <p>La définition de l'invalidité dans votre contrat SRD est cruciale. Certains contrats ne couvrent que l'invalidité totale et permanente (≥66%), d'autres à partir de 25%. Cette clause peut changer radicalement l'utilité de votre couverture en cas d'accident grave.</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-card-number">40%</div>
+        <div class="stat-card-desc">C'est l'économie moyenne réalisée sur la prime SRD lorsqu'on fait comparer les offres par un courtier indépendant plutôt que de souscrire directement auprès de la banque prêteuse.</div>
+        <div class="stat-card-divider"></div>
+        <div class="stat-card-quote">« Votre banque n'est pas votre meilleure conseillère en assurance. Son intérêt et le vôtre ne coïncident pas toujours. »</div>
+      </div>
+    </div>
+
+    <!-- 3 types de couverture -->
+    <div style="margin-top:64px;">
+      <div class="section-label">Types de couverture</div>
+      <h3 class="section-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:8px;">Quelle formule choisir<br/>selon votre situation ?</h3>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Formule</th>
+            <th>Ce qu'elle couvre</th>
+            <th>Profil adapté</th>
+            <th>Coût relatif</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Décès seul</strong></td>
+            <td>Remboursement du capital restant dû en cas de décès</td>
+            <td>Jeunes actifs en bonne santé, budget limité</td>
+            <td><span class="badge-tag badge-green">Faible</span></td>
+          </tr>
+          <tr>
+            <td><strong>Décès + Invalidité totale</strong></td>
+            <td>+ Couverture si invalidité ≥ 66%</td>
+            <td>Familles avec enfants, emploi physique</td>
+            <td><span class="badge-tag badge-blue">Moyen</span></td>
+          </tr>
+          <tr>
+            <td><strong>Formule complète</strong></td>
+            <td>+ Incapacité temporaire, maladie grave, invalidité partielle</td>
+            <td>Indépendants, couples avec 1 revenu</td>
+            <td><span class="badge-tag badge-orange">Élevé</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CHAPITRE 04 – REVENUS & SANTÉ / TIMELINE RETRAITE
+════════════════════════════════════════════════════════════ -->
+<hr class="section-divider" id="ch4"/>
+
+<div class="chapter-banner">
+  <div class="chapter-banner-inner">
+    <div class="chapter-num-large">04</div>
+    <div class="chapter-banner-text">
+      <div class="chapter-tag">Chapitre 04 — Revenus, Santé & Incapacité</div>
+      <h2>Ce que vous perdez vraiment<br/>en cas d'arrêt prolongé</h2>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white">
+  <div class="section-wrap">
+    <div class="content-grid reverse">
+      <div class="stat-card">
+        <div class="stat-card-number">68%</div>
+        <div class="stat-card-desc">Des Belges pensent être bien couverts en cas de maladie longue, mais sous-estiment l'impact financier réel d'un arrêt de travail dépassant 6 mois. Les indemnités de la mutuelle ne couvrent pas votre niveau de vie.</div>
+        <div class="stat-card-divider"></div>
+        <div class="stat-card-quote">« Une bonne couverture santé n'est pas la plus chère — c'est celle qui correspond exactement à votre réalité professionnelle. »</div>
+      </div>
+
+      <div class="content-body">
+        <div class="section-label">Revenu garanti & incapacité</div>
+        <h2 class="section-title" style="font-size:clamp(22px,3vw,32px);margin-bottom:16px;">Ce que la mutuelle<br/>ne couvre pas</h2>
+        <p>La mutuelle (INAMI) couvre une partie de votre perte de revenus en cas d'incapacité. Mais la <strong>différence entre l'indemnité légale et votre salaire réel</strong> peut être brutale, surtout pour les indépendants.</p>
+        <p>Une assurance revenu garanti (ou assurance revenu) comble cet écart. Elle verse une rente mensuelle jusqu'à votre reprise ou à l'âge de la pension, selon les conditions du contrat.</p>
+
+        <ul class="insight-list">
+          <li><span class="check check-green">✓</span> <strong>Salarié :</strong> la mutuelle couvre environ 60% du salaire brut plafonné après la période de garantie employeur (30 jours)</li>
+          <li><span class="check check-green">✓</span> <strong>Indépendant :</strong> les indemnités INAMI sont forfaitaires et très faibles les 2 premières semaines</li>
+          <li><span class="check check-green">✓</span> Une assurance revenu garanti peut être <strong>déductible fiscalement</strong> à titre de frais professionnels</li>
+          <li><span class="check check-green">✓</span> La couverture hospitalisation complète les remboursements INAMI pour les soins en chambre individuelle</li>
+        </ul>
+
+        <div class="info-box info-box-green">
+          <div class="info-box-title">🏥 Mutualité vs assurance hospitalisation privée</div>
+          <p>La mutualité couvre les remboursements de base selon les tarifs INAMI. Une assurance hospitalisation privée prend en charge le supplément de chambre individuelle, les honoraires au-delà des tarifs, et certains médicaments non remboursés. Pour les familles, la combinaison des deux est souvent la plus efficace.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Timeline de vie -->
+<section class="timeline-section">
+  <div class="timeline-inner">
+    <div class="timeline-header">
+      <div class="timeline-label">Planification par étape de vie</div>
+      <h2 class="timeline-title">La bonne décision<br/>au bon moment</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-age">Début de carrière · Poser les fondations</div>
+        <h4>Protéger et épargner tôt</h4>
+        <p>L'épargne-pension ouverte à 25 ans représente presque le double d'un contrat ouvert à 40 ans — grâce aux intérêts composés. Priorité aussi à l'assurance revenu garanti : les primes sont bien plus faibles en bonne santé.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Épargne-pension</span>
+          <span class="timeline-tag">Revenu garanti</span>
+          <span class="timeline-tag">Hospitalisation</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-age">En pleine activité · Optimiser et diversifier</div>
+        <h4>Maximiser les déductions, sécuriser l'immobilier</h4>
+        <p>C'est la décennie clé : maximiser l'épargne-pension + l'épargne long terme, ajuster la SRD après un achat immobilier, revoir la couverture santé si la famille s'est agrandie. L'assurance groupe (si disponible) mérite une attention particulière.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Branche 21/23</span>
+          <span class="timeline-tag">SRD</span>
+          <span class="timeline-tag">Épargne Long Terme</span>
+          <span class="timeline-tag">Assurance groupe</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-age">Approche de la retraite · Sécuriser et transmettre</div>
+        <h4>Vers la sortie : rebalancer et anticiper</h4>
+        <p>Basculer progressivement vers la branche 21 pour sécuriser le capital constitué. Anticiper la succession, évaluer les options rente vs capital, vérifier les bénéficiaires des contrats d'assurance-vie.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Succession</span>
+          <span class="timeline-tag">Rente vs capital</span>
+          <span class="timeline-tag">Branche 21</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-age">À la retraite · Profiter en sérénité</div>
+        <h4>Optimiser les sorties, adapter les couvertures</h4>
+        <p>Choisir le bon moment pour débloquer les capitaux constitués. Adapter l'hospitalisation aux besoins de santé évolutifs. Continuer à transmettre intelligemment pour minimiser les droits de succession.</p>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Liquidation pension</span>
+          <span class="timeline-tag">Donation</span>
+          <span class="timeline-tag">Assurance dépendance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CHAPITRE 05 – PLAN D'ACTION
+════════════════════════════════════════════════════════════ -->
+<div id="ch5" class="chapter-banner">
+  <div class="chapter-banner-inner">
+    <div class="chapter-num-large">05</div>
+    <div class="chapter-banner-text">
+      <div class="chapter-tag">Chapitre 05 — Plan d'action personnalisé</div>
+      <h2>10 actions concrètes à mettre<br/>en place cette année</h2>
+    </div>
+  </div>
+</div>
+
+<div class="bg-grey">
+  <div class="section-wrap">
+    <div class="section-label">Checklist 2026</div>
+    <h2 class="section-title">Votre feuille de route<br/>pas à pas</h2>
+    <p class="section-sub">Ces 10 actions sont classées par priorité et applicables quelle que soit votre situation. Cochées une par une, elles transforment votre situation financière durablement.</p>
+
+    <div class="action-grid">
+      <div class="action-item">
+        <div class="action-num">1</div>
+        <div class="action-title">Vérifier votre relevé de carrière pension</div>
+        <div class="action-desc">Consultez mypension.be pour identifier d'éventuelles lacunes dans votre carrière et estimer votre pension légale.</div>
+        <span class="action-tag badge-tag badge-blue">Gratuit · 15 min</span>
+      </div>
+
+      <div class="action-item">
+        <div class="action-num">2</div>
+        <div class="action-title">Ouvrir ou maximiser votre épargne-pension</div>
+        <div class="action-desc">Si vous n'avez pas encore atteint le plafond 2026 (1 350 € ou 1 710 €), faites le versement avant le 31 décembre.</div>
+        <span class="action-tag badge-tag badge-blue">Priorité haute</span>
+      </div>
+
+      <div class="action-item">
+        <div class="action-num">3</div>
+        <div class="action-title">Activer l'Épargne Long Terme</div>
+        <div class="action-desc">Cumulable avec l'épargne-pension, ce second levier fiscal est ignoré par la plupart. Plafond 2026 : 2 450 €.</div>
+        <span class="action-tag badge-tag badge-green">Économie fiscale directe</span>
+      </div>
+
+      <div class="action-item">
+        <div class="action-num">4</div>
+        <div class="action-title">Faire comparer votre assurance SRD</div>
+        <div class="action-desc">Si vous avez un crédit hypothécaire, un courtier indépendant peut vous économiser jusqu'à 40% sur la prime annuelle.</div>
+        <span class="action-tag badge-tag badge-orange">Économie 200–600 €/an</span>
+      </div>
+
+      <div class="action-item">
+        <div class="action-num">5</div>
+        <div class="action-title">Évaluer votre couverture revenu garanti</div>
+        <div class="action-desc">Calculez l'écart entre les indemnités INAMI et votre salaire net actuel. C'est cet écart que l'assurance doit couvrir.</div>
+        <span class="action-tag badge-tag badge-blue">Indispensable</span>
+      </div>
+
+      <div class="action-item">
+        <div class="action-num">6</div>
+        <div class="action-title">Revoir les bénéficiaires de vos contrats</div>
+        <div class="action-desc">Mariage, divorce, naissance, décès… Les clauses bénéficiaires doivent être mises à jour à chaque événement familial.</div>
+        <span class="action-tag badge-tag badge-green">Rapide · critique</span>
+      </div>
+
+      <div class="action-item">
+        <div class="action-num">7</div>
+        <div class="action-title">Vérifier l'assurance groupe de votre employeur</div>
+        <div class="action-desc">La fiche 281.11 fournie par votre employeur détaille les capitaux constitués. Beaucoup de salariés ne la lisent jamais.</div>
+        <span class="action-tag badge-tag badge-blue">Pilier 2</span>
+      </div>
+
+      <div class="action-item">
+        <div class="action-num">8</div>
+        <div class="action-title">Comparer mutualité et hospitalisation privée</div>
+        <div class="action-desc">Vérifiez ce que votre mutualité rembourse réellement pour une chambre individuelle, et si une assurance complémentaire est utile.</div>
+        <span class="action-tag badge-tag badge-orange">Santé</span>
+      </div>
+
+      <div class="action-item">
+        <div class="action-num">9</div>
+        <div class="action-title">Estimer vos droits de succession actuels</div>
+        <div class="action-desc">En Wallonie et à Bruxelles, les tarifs sont progressifs. Une planification simple (donation, assurance-vie) peut réduire significativement la facture.</div>
+        <span class="action-tag badge-tag badge-green">Transmission</span>
+      </div>
+
+      <div class="action-item">
+        <div class="action-num">10</div>
+        <div class="action-title">Prendre rendez-vous avec un conseiller indépendant</div>
+        <div class="action-desc">Un audit patrimonial complet en 1h30 permet de prioriser vos actions selon votre situation réelle. Gratuit, sans engagement.</div>
+        <span class="action-tag badge-tag badge-blue">Étape finale</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════════════════ -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="testimonials-header">
+      <div class="section-label">Témoignages</div>
+      <h2 class="section-title">Ce qu'en disent nos lecteurs</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">J'avais l'impression de payer beaucoup d'impôts sans raison. Ce guide m'a ouvert les yeux sur l'épargne-pension et j'ai pris rendez-vous dans la foulée. Résultat : 420 € de réduction d'impôt dès la première année.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#1D4ED8,#3B82F6)">M</div>
+          <div>
+            <div class="author-name">Marie D.</div>
+            <div class="author-role">Ingénieure · Liège</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Guide clair sur le solde restant dû. On m'avait vendu une assurance trop chère par ma banque — je le pressentais mais je n'avais pas les arguments. Après avoir lu le chapitre 3, j'ai renégocié et économisé 380 € par an.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#F97316,#EA580C)">T</div>
+          <div>
+            <div class="author-name">Thomas V.</div>
+            <div class="author-role">Entrepreneur · Namur</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">En tant qu'indépendante, je ne savais pas que j'étais aussi exposée en cas de maladie longue. Le chapitre 4 est choquant — mais nécessaire. J'ai enfin souscrit un revenu garanti adapté à ma situation.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#16A34A,#4ADE80)">S</div>
+          <div>
+            <div class="author-name">Sophie L.</div>
+            <div class="author-role">Indépendante · Bruxelles</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOTTOM CTA
+════════════════════════════════════════════════════════════ -->
+<section class="cta-section" id="cta">
+  <div class="cta-inner">
+    <h2 class="cta-title">Prêt à passer<br/>à l'action ?</h2>
+    <p class="cta-sub">Bénéficiez d'un entretien personnalisé gratuit pour appliquer ces stratégies à votre situation concrète. Sans engagement, par un conseiller indépendant certifié FSMA.</p>
+
+    <a href="https://calendly.com/yaoakoe-ovb" target="_blank" class="cta-btn" style="display:inline-flex;align-items:center;gap:10px;padding:16px 40px;font-size:16px;border-radius:10px;text-decoration:none;margin-bottom:16px;">📅 Prendre rendez-vous gratuitement</a>
+
+    <div class="cta-note">🔒 Données confidentielles · Jamais revendues · Désinscription en 1 clic</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SOURCES
+════════════════════════════════════════════════════════════ -->
+<section style="background:var(--offwhite);border-top:1px solid var(--grey-100);padding:56px 24px;">
+  <div style="max-width:1140px;margin:0 auto;">
+    <div class="section-label">Références</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,28px);font-weight:700;color:var(--navy);margin-bottom:32px;line-height:1.2;">Sources & références officielles</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div style="background:var(--white);border:1px solid var(--grey-100);border-radius:12px;padding:24px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;">Fiscalité & Épargne</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;padding-bottom:10px;border-bottom:1px solid var(--grey-100);">SPF Finances — <em>Épargne-pension : avantages fiscaux et plafonds applicables</em>, mise à jour 2026</li>
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;padding-bottom:10px;border-bottom:1px solid var(--grey-100);">SPF Finances — <em>Réduction d'impôt pour épargne à long terme (assurance-vie)</em>, 2026</li>
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;padding-bottom:10px;border-bottom:1px solid var(--grey-100);">SPF Finances — <em>Déclaration à l'impôt des personnes physiques (IPP) : frais professionnels réels</em>, exercice 2026</li>
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;">Code des impôts sur les revenus (CIR 92), articles 145/1 à 145/16 — épargne-pension et épargne à long terme</li>
+        </ul>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--grey-100);border-radius:12px;padding:24px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">Pension & Prévoyance</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;padding-bottom:10px;border-bottom:1px solid var(--grey-100);">Service fédéral des Pensions — <em>Ma Pension : calcul et simulation de la pension légale</em>, mypension.be, 2026</li>
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;padding-bottom:10px;border-bottom:1px solid var(--grey-100);">FSMA — <em>Les assurances-vie de la branche 21 et de la branche 23 : caractéristiques et différences</em></li>
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;padding-bottom:10px;border-bottom:1px solid var(--grey-100);">FSMA — <em>Pension complémentaire libre pour indépendants (PLCI) et engagement individuel de pension (EIP)</em>, 2026</li>
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;">Loi du 28 avril 2003 relative aux pensions complémentaires (LPC) — cadre réglementaire assurance groupe</li>
+        </ul>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--grey-100);border-radius:12px;padding:24px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:14px;">Santé, Immobilier & Protection</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;padding-bottom:10px;border-bottom:1px solid var(--grey-100);">INAMI — <em>Indemnités d'incapacité de travail : règles de calcul et conditions d'octroi</em>, 2026</li>
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;padding-bottom:10px;border-bottom:1px solid var(--grey-100);">INAMI — <em>Remboursements des soins de santé : nomenclature et tarifs officiels</em>, janvier 2026</li>
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;padding-bottom:10px;border-bottom:1px solid var(--grey-100);">FSMA — <em>Assurance solde restant dû : informations aux consommateurs et droit de libre choix</em></li>
+          <li style="font-size:13.5px;color:var(--grey-700);line-height:1.55;">Code civil belge — Livre 4 : successions et libéralités ; droits de succession par Région (Wallonie, Bruxelles-Capitale)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-500);margin-top:28px;line-height:1.7;max-width:860px;">
+      <strong style="color:var(--grey-700);">Note :</strong> Les informations contenues dans ce guide sont fournies à titre informatif et pédagogique. Elles ne constituent pas un conseil juridique, fiscal ou financier personnalisé. Les chiffres, plafonds et taux mentionnés sont ceux en vigueur au 1er janvier 2026 et sont susceptibles d'évoluer. Consultez un conseiller indépendant certifié FSMA pour toute décision relative à votre situation personnelle.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Cabinet Conseil Assurance</div>
+    <div class="footer-text">© 2026 · Wallonie & Bruxelles · Conseillers indépendants certifiés FSMA</div>
+    <div class="footer-text">Données protégées conformément au RGPD</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.style.opacity = '1';
+        el.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.pillar-card, .testimonial, .action-item, .timeline-item, .stat-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
